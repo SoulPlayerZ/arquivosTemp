@@ -127,7 +127,7 @@ Lembre-se de provocar uma falha no seu teste para evitar famoso *falso positivo*
 
 ## Testando Eventos
 <br>
-Até o momento, nós testamos, basicamente, se elementos estão aprecendo na tela quando nosso componente é renderizado. Se possuem alguma propriedade ou algum texto específico. Mas com a RTL nós podemos testar o comportamento da nossa aplicação de acordo com interações(simulação de interações) da pessoa que utiliza nossa aplicação.
+Até o momento, nós testamos, basicamente, se elementos estão aprecendo na tela quando nosso componente é renderizado. Se possuem alguma propriedade ou algum texto específico. Mas com a RTL nós podemos testar o comportamento da nossa aplicação de acordo com <s>interações</s>simulações de interação da pessoa que utiliza nossa aplicação.
 
 A RTL possui uma ferramenta interessante para testar eventos que é o *fireEvent*. Vamos entender um pouco sobre ele com um exemplo:
 
