@@ -1,7 +1,6 @@
 # Recursos Adicionais
 
 
-
 - [Documentação do React - Testing Overview](https://reactjs.org/docs/testing.html)
 
 - [React Testing Library(GitHub)](https://github.com/testing-library/react-testing-library)

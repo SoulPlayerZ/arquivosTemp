@@ -1,7 +1,7 @@
 # Vamos praticar!
 
 
-Chegou o melhor momento :wink:
+Chegou o melhor momento. :blush:
 Agora é a hora de por em prática todo esse aprendizado de hoje.
 Antes de iniciarmos os exercícios, vamos preprar nossa aplicação que será testada.
 Lembre-se sempre de provocar uma falha nos testes para garantir que não está passando um falso positivo.
@@ -81,7 +81,7 @@ describe('Testa o comportamento do componente App.js', () => {
 });
 ````
 
-- Tudo pronto :wink: Vamos praticar.
+- Tudo pronto! Vamos praticar. :wink:
 <br>
 <br>
 
@@ -89,7 +89,7 @@ describe('Testa o comportamento do componente App.js', () => {
 
 ### 2 - Escreva um teste para verificar se um botão com o texto "Sortear" é renderizado.
 
-### 3 - Verifique se, após clicar no botão, é exibido na tela um elemento que contenha o texto "Número sorteado:" e uma imagem.
+### 3 - Verifique se, após clicar no botão, um elemento que contenha o texto "Número sorteado:" e uma imagem são exibidos na tela.
 
 ### 4 - Teste se a imagem possui o atributo "src" com a url(`https://vgraphs.com/images/players/sprays/high-quality/valorant-spray-all-good.png`);
 
@@ -98,7 +98,7 @@ describe('Testa o comportamento do componente App.js', () => {
 <hr>
 <u><h2>EXERCÍCIO 2 (Bônus)</h2></u>
 
-Vamos testar agora uma aplicação simples que exibe uma imagem feliz para melhorar nosso dia :wink:
+Vamos testar uma aplicação simples que exibe uma imagem feliz para melhorar nosso dia :blush:
 
 - Rode o comando npx *create-react-app imagem-feliz*.
 
@@ -175,8 +175,8 @@ describe('Testa o comportamento do componente App.js', () => {
 
 ### 2 - Verifique se existe um botão renderizado na tela.
 
-### 3 - Verifique se o botão possui o texto "Fique feliz".
+### 3 - Teste se o botão possui o texto "Fique feliz".
 
-### 4 - Verifique se uma imagem é rendizada após clicar no botão.
+### 4 - Faça um teste que verifica se uma imagem é rendizada após clicar no botão.
 
 ### 5 - Verifique se a imagem possui o atributo "src" com a url(`https://www.tupacity.com/img/2018/07/26/fileg_386550.jpg`)

@@ -5,5 +5,3 @@
   - Utilizar seletores para fazer testes mais direcionados com RTL
 
   - Testar comportamentos da sua aplicação simulando a interação do usuário.
-
-  - Com RTL, testar funcionalidades que são assíncronas na aplicação.

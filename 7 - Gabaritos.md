@@ -13,7 +13,7 @@ expect(fightingGame).toBeInTheDocument();
 ````
 
 
-<h3>---Ao rodar o comando 'npm test' teste falhará.---</h3>
+<h3>---Ao rodar o comando 'npm test' o teste falhará.---</h3>
 <br>
 
 ### A afirmação acima está:
@@ -21,7 +21,7 @@ expect(fightingGame).toBeInTheDocument();
 
 <b>a) </b>CERTA
 <br>
-*O melhor seletor a utilizar neste caso seria o "getByText". "getByTextIncludes" não existe. logo, nosso teste falhará.*
+*O melhor seletor a utilizar neste caso seria o "getByText". "getByTextIncludes" não existe. Logo, nosso teste falhará.*
 <br>
 <br>
 
@@ -48,25 +48,25 @@ expect(favoriteMusicElement).toBeInTheDocument();
 
 <s>a)</s> Se favoriteMusicElement tem o texto "Minha música preferida".
 <br>
-*Para realizarmos este teste poderíamos utilizar o matcher "toHaveTextContent" por exemplo.*
+*Para realizarmos este teste, poderíamos utilizar o matcher "toHaveTextContent" por exemplo.*
 <br>
 <br>
 
 <s>b)</s> Se o elemento recuperado é um parágrafo.
 <br>
-*No código não podemos afirmar se o elemento recuperado é um `<p>`.*
+*No código do exercício, não podemos afirmar se o elemento recuperado é um `<p>`.*
 <br>
 <br>
 
-<b>c) </b> Se um elemento que inclue o texto "Minha música preferida" está renderizado na tela.
+<b>c) </b> Se um elemento que inclui o texto "Minha música preferida" está renderizado na tela.
 <br>
-*O seletor "getByText" recuperar um elemento pelo seu texto. E o matcher "toBeInTheDocument" verifica se este elemento é renderizado.*
+*O seletor "getByText" recupera um elemento pelo seu texto. E o matcher "toBeInTheDocument" verifica se este elemento é renderizado.*
 <br>
 <br>
 
 <s>d)</s> Se existe uma imagem renderizada na tela.
 <br>
-*O detalhe aqui é que não recuperamos um elemento `<img>` por texto, mas poderíamos recuperar com o seletor "getByAltText".*
+*O detalhe aqui, é que não recuperamos um elemento `<img>` por texto, mas poderíamos recuperar com o seletor "getByAltText", por exemplo.*
 <br>
 <br>
 
@@ -90,13 +90,14 @@ expect(favoriteMusicElement).toBeInTheDocument();
 <b>a)</b> Testar o comportamento da aplicação em diversas situações de acordo com os possíveis casos de uso.
 <br>
 *Quando utilizávamos Jest, o foco era cobrir nosso código e testar o retorno de nossas funções. 
-Com a RTL nós testamos o comportamento da nossa aplicação.*
+Com a RTL nós testamos o comportamento da nossa aplicação. 
+Esta afimação está correta.*
 <br>
 <br>
 
 <s>b)</s> Substituir a biblioteca Enzyme para realizar testes em aplicações React.
 <br>
-*Além da preferência de quem está desenvolvendo os testes, existem cituações onde é melhor utilizar o Enzyme
+*Além da preferência de quem está desenvolvendo os testes, existem situações onde é melhor utilizar o Enzyme
 e outras onde seria mais adequado utilizar o RTL. Nos recursos adicionais temos [este artigo](https://medium.com/wesionary-team/react-testing-library-vs-enzyme-afd29db380ac) que explica de forma mais detalhada algumas
 diferenças entre as duas bibliotecas.*
 <br>
@@ -108,12 +109,12 @@ diferenças entre as duas bibliotecas.*
 <br>
 <s>d)</s>  Se tornar uma linguagem de programação.
 <br>
-*O objetivo da Rect Testing Library é, apenas testar nossas aplicações. rs*
+*O objetivo da Rect Testing Library é, apenas testar nossas aplicações.*
 <br>
 <br>
 <s>e)</s>  Tentar conquistar o mundo.
 <br>
-*Este é o objetivo princípal do Cérebro. Isso mesmo. Aquele do desenho. rs*
+*Este é o objetivo princípal do Cérebro. Isso mesmo. Aquele do desenho.* :wink:
 <br>
 <br>
 <br>
@@ -123,7 +124,7 @@ diferenças entre as duas bibliotecas.*
 <u><h2>Questão 4</h2></u>
 <br>
 
-## Qual a sintaxe correta para o caso de querermos testar se um botão inclue o texto "Enviar" ?
+## Qual a sintaxe correta para o caso de querermos testar se um botão inclui o texto "Enviar" ?
 <br>
 
 <s>a)</s> 
@@ -132,7 +133,7 @@ render(<App />);
 const button = screen.getByType('button');
 expect(button).toHaveTextContent('Enviar');
 ````
-*O seletor nesse caso seria o 'getByRole'. Sempre precisamos lembrar de consultar a [documentação](https://testing-library.com/docs/react-testing-library/cheatsheet/) quando temos alguma dúvida.*
+*O seletor, nesse caso, seria o 'getByRole'. Sempre precisamos lembrar de consultar a [documentação](https://testing-library.com/docs/react-testing-library/cheatsheet/) quando temos alguma dúvida.*
 <br>
 <br>
 <br>
@@ -166,7 +167,7 @@ render(<App />);
 const button = screen.getByRole('button');
 expect(button).toHaveTextContent('Enviar');
 ````
-*Após recuperar o botão ,testamos com o matcher toHaveTextContent, se palavra "Enviar" está incluso em seu texto.
+*Após recuperar o botão ,testamos com o matcher toHaveTextContent, se palavra "Enviar" está contida em seu texto.
 O que passamos para o matcher 'toHaveTextContent' é o que queremos testar se está incluso no texto. O botão poderia ter o texto "Enviar Formulário".
 O teste iria passar, já que "Enviar Formulário" contém a plavra "Enviar".*
 <br>
@@ -179,7 +180,7 @@ render(<App />);
 const button = screen.getByRole('button');
 expect(button).toHaveTextContent.includes('Enviar');
 ````
-*O matcher correto para este teste seria somente "toHaveTextContent". "toHaveTextContent.includes" está incorreto.*
+*O matcher correto para este teste seria "toHaveTextContent". "toHaveTextContent.includes" está incorreto.*
 <br>
 <br>
 <br>
@@ -200,7 +201,7 @@ const hatImage = screen.getByText(/hat/i);
 expect(hatImage).toHaveAttribute('src'); 
 ````
 *Não conseguimos recuperar imagem pelo seletor 'getByText'. Este seletor é utilizado 
-quando queremos capturar um elemento pelo seu conteúdo texto. Com imagem podemos utilizar o 'getByAltText' por exemplo.*
+quando queremos capturar um elemento pelo seu conteúdo texto. Com imagem podemos utilizar o 'getByAltText', por exemplo.*
 <br>
 <br>
 <br>
@@ -224,8 +225,8 @@ render(<App />)
 const hatImage = screen.getByAltText(/hat/i);
 expect(hatImage).toHaveAttribute('src'); 
 ````
-*Estamos, após a renderização do componente `<App />` recuperando o componente imagem
-através do texto da propriedade 'alt' da imagem. Em seguida testamos se a imagem possui o atibuto 'src' 
+*Estamos, após a renderização do componente `<App />`, recuperando o componente imagem
+através do valor da propriedade 'alt'. Em seguida testamos se a imagem possui o atibuto 'src' 
 com o matcher 'toHaveAttribute' e indicando em string o atributo que queremos verificar.*
 <br>
 <br>
@@ -240,7 +241,7 @@ const hatImage = screen.getByAltText(/hat/i);
 expect(hatImage).toHaveAttribute(src); 
 ````
 *Aqui é um detalhe. Quando passamos para o matcher o atributo que estamos querendo testar, este deve ser passado
-em formato string. Para este caso funcionar precisaríamos declarar uma const chamada src e passar o valor em string 'src' para ela.*
+em formato string. Para este caso funcionar, precisaríamos declarar uma const chamada src e passar o valor em string 'src' para ela.*
 <br>
 <br>
 <br>
@@ -252,8 +253,8 @@ render(<App />)
 const hatImage = screen.getByAltText(/hat/i);
 expect(hatImage.attribute).toBe(src); 
 ````
-*"attribute" não é um atributo da tag <img>, mas, a nível de curiosidade, você pode testar imagem.src e usar o matcher toBe para
-testar se o valor do atributo src é um determinado valor, em string, passado ao matcher toBe. 
+*"attribute" não é um atributo da tag <img>, mas, a nível de curiosidade, você pode testar imagem.src e usar o matcher "toBe" para
+testar se o atributo src tem um determinado valor, em string, passado ao matcher toBe. 
 Lembre-se sempre de consultar a [documentação](https://github.com/testing-library/jest-dom) quando necessário.*
 <br>
 <br>
@@ -268,7 +269,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 
 <u><h2>EXERCÍCIO 1</h2></u>
 
-## 1 - Teste se o texto "Clique para sortear um número entre 0 e 100" é renderizado.
+### 1 - Teste se o texto "Clique para sortear um número entre 0 e 100" é renderizado.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -282,7 +283,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <br>
 <br>
 
-## 2 - Escreva um teste para verificar se um botão com o texto "Sortear" é renderizado.
+### 2 - Escreva um teste para verificar se um botão com o texto "Sortear" é renderizado.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -297,7 +298,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <br>
 <br>
 
-## 3 - Verifique se, após clicar no botão, é exibido na tela um elemento que contenha o texto "Número sorteado:" e uma imagem.
+### 3 - Verifique se, após clicar no botão, um elemento que contenha o texto "Número sorteado:" e uma imagem são exibidos na tela.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -315,7 +316,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <br>
 <br>
 
-## 4 - Teste se a imagem possui o atributo "src" com a url(`https://vgraphs.com/images/players/sprays/high-quality/valorant-spray-all-good.png`);
+### 4 - Teste se a imagem possui o atributo "src" com a url(`https://vgraphs.com/images/players/sprays/high-quality/valorant-spray-all-good.png`);
 <br>
 
 <u><h2>Solução</h2></u>
@@ -337,7 +338,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <u><h2>EXERCÍCIO 2 (Bônus)</h2></u>
 
 
-## 1 - Teste se o título está na tela ao renderizar o componente App.
+### 1 - Teste se o título está na tela ao renderizar o componente App.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -351,7 +352,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <br>
 <br>
 
-## 2 - Verifique se existe um botão renderizado na tela.
+### 2 - Verifique se existe um botão renderizado na tela.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -365,12 +366,12 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
   <br>
   <br>
 
-## 3 - Verifique se o botão possui o texto "Fique feliz".
+### 3 - Teste se o botão possui o texto "Fique feliz".
 <br>
 
 <u><h2>Solução</h2></u>
 ````JavaScript
-  it('Verifique se o botão possui o texto "Fique feliz"', () => {
+  it('Verifica se o botão possui o texto "Fique feliz"', () => {
     render(<App />);
     const btn = screen.getByRole('button');
     expect(btn).toHaveTextContent("Fique feliz");
@@ -379,7 +380,7 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
   <br>
   <br>
 
-## 4 - Verifique se uma imagem é rendizada após clicar no botão.
+### 4 - Faça um teste que verifica se uma imagem é rendizada após clicar no botão.
 <br>
 
 <u><h2>Solução</h2></u>
@@ -395,12 +396,12 @@ Lembre-se sempre de consultar a [documentação](https://github.com/testing-libr
 <br>
 <br>
 
-## 5 - Verifique se a imagem possui o atributo "src" com a url(`https://www.tupacity.com/img/2018/07/26/fileg_386550.jpg`)
+### 5 - Verifique se a imagem possui o atributo "src" com a url(`https://www.tupacity.com/img/2018/07/26/fileg_386550.jpg`)
 <br>
 
 <u><h2>Solução</h2></u>
 ````JavaScript
- it('Verifique se a imagem possui o atributo "src" com a url(`https://www.tupacity.com/img/2018/07/26/fileg_386550.jpg`)', () => {
+ it('Verifica se a imagem possui o atributo "src" com a url(`https://www.tupacity.com/img/2018/07/26/fileg_386550.jpg`)', () => {
     render(<App />);
     const btn = screen.getByRole('button');
     userEvent.click(btn);
